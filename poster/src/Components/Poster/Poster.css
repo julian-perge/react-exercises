@@ -1,0 +1,22 @@
+.poster {
+	background-color: #222222;
+	border: 3px solid rgb(76, 144, 202);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+}
+
+.poster-image {
+	border: 3px solid rgb(97, 218, 250);
+}
+
+.title {
+	color: rgb(97, 218, 250);
+	font-size: 4rem;
+}
+
+.text {
+	font-size: 1.75rem;
+}

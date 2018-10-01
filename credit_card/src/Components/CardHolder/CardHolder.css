@@ -1,0 +1,5 @@
+.cardHolder {
+	font-size: 1.25rem;
+	grid-area: cardHolder;
+	margin-left: 1rem;
+}

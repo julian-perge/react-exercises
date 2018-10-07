@@ -1,0 +1,24 @@
+.errorBox {
+	background-color: #ffe6e6;
+	border: 2px solid red;
+	border-radius: 7px;
+	height: 56px;
+	width: 512px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+i.fas.fa-exclamation-triangle,
+.children {
+	font-size: 24px;
+	color: #e60000;
+}
+
+i.fas.fa-exclamation-triangle {
+	margin: 14px;
+}
+
+.children-exercises {
+	border: 1px solid black;
+}

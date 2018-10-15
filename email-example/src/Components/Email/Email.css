@@ -1,0 +1,44 @@
+.email {
+	width: 80vw;
+	align-items: center;
+	display: grid;
+	grid-template-columns: 33px 45px 1fr 2fr 100px;
+	grid-template-rows: repeat(2, 33px);
+	grid-template-areas:
+		'checkbox thumbtack sender subject date'
+		'checkbox thumbtack message message message';
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.sender,
+.subject,
+.date {
+	font-size: 1.1rem;
+}
+
+.checkbox {
+	grid-area: checkbox;
+}
+
+.fas.fa-thumbtack {
+	grid-area: thumbtack;
+	justify-self: center;
+}
+
+.sender {
+	grid-area: sender;
+}
+
+.subject {
+	grid-area: subject;
+}
+
+.date {
+	grid-area: date;
+}
+
+.message {
+	grid-area: message;
+	color: #777777;
+}

@@ -7,30 +7,30 @@ import Tail from './Tail';
 
 import './ErrorBox.css';
 
+const items = ['FirstChild', 'SecondChild', 'LastChild'];
+const renderChildren = [
+	'Alan',
+	'Donny',
+	'Brian',
+	'Kendra',
+	'Lauren',
+	'Anne',
+	'Lacey',
+	'Aaron'
+];
+
 function ErrorBox({ children }) {
-	const items = ['FirstChild', 'SecondChild', 'LastChild'];
-	const renderChildren = [
-		3,
-		'Alan',
-		'Donny',
-		'Brian',
-		'Kendra',
-		'Lauren',
-		'Anne',
-		'Lacey',
-		'Aaron'
-	];
 	return (
 		<main className="errorBox-with-children">
-      <div className="errorBox">
-        <i className="fas fa-exclamation-triangle" />
-        <span className="children">{children}</span>
-      </div>
+			<div className="errorBox">
+				<i className="fas fa-exclamation-triangle" />
+				<span className="children">{children}</span>
+			</div>
 			<div className="children-exercises">
 				<FirstChildOnly>{items}</FirstChildOnly>
 				<LastChildOnly>{items}</LastChildOnly>
-				<Head>{renderChildren}</Head>
-				<Tail>{renderChildren}</Tail>
+				<Head number={3}>{renderChildren}</Head>
+				<Tail number={3}>{renderChildren}</Tail>
 			</div>
 		</main>
 	);

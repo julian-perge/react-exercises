@@ -7,11 +7,11 @@ function ListItem({ value }) {
 }
 
 // Destructure passed in node
-function Head({ children }) {
+function Head({ number, children }) {
 	// Destructure from conversion to array
 	// first const being the number of people to render
 	// second const being an array of people given
-	const [number, ...people] = Children.toArray(children);
+	const people = Children.toArray(children);
 	const peopleToRender = [];
 	for (let i = 0; i < number; i++) {
 		// add {number} of people to peopleToRender array

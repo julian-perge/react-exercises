@@ -6,12 +6,14 @@ You can find the most recent version of this guide [here](https://github.com/fac
 # Overview
 
 ```
-Create a Poster component that takes image, title, and text as props.
+Create a single-line email, as would appear in an inbox.
 
-Render something similar to the poster image below.
+Screenshot of an example below.
+
+It should accept an email prop, which contains the sender, subject, date, and message.
 ```
 
-<img src="https://i.imgur.com/rtM7SCJ.png" alt="image of poster to base creation on">
+<img src="https://i.imgur.com/heBkJ96.png" alt="image of email example to base creation on"
 
 ## Installing
 

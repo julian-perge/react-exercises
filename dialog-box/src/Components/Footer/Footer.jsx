@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Footer({ children }) {
+function Footer({ buttonText }) {
   return (
     <footer className="footer">
-      {children}
+      {buttonText}
     </footer>
   );
 }
 
 Footer.propTypes = {
-  children: PropTypes.element,
+  buttonText: PropTypes.string,
 };
 
 Footer.defaultProps = {
-  children: 'test',
+  buttonText: 'Close',
 };
 
 export default Footer;

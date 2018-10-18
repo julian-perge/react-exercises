@@ -7,90 +7,80 @@
   ],
   "env": {
     "browser": true,
-	"jest": true,
+    "node": true,
+    "es6": true,
+	"jest" : true
   },
-  "rules": {
-    "default-case": 0,
-    "max-len": [
-      1,
-      120,
-      2,
-      {
-        "ignoreComments": true
-      }
-    ],
-    "no-cond-assign": [
-      2,
-      "except-parens"
-    ],
-    "no-else-return": 0,
-    "no-param-reassign": 0,
-    "no-unused-vars": [
-      1,
-      {
-        "vars": "local",
-        "args": "none"
-      }
-    ],
-    "quotes": 0,
-    "quote-props": [
-      1,
-      "consistent-as-needed"
-    ],
-    "radix": 0,
-    "react/display-name": 2,
-    "react/jsx-boolean-value": [
-      2,
-      "always"
-    ],
-    "react/jsx-curly-brace-presence": [
-      "error",
-      {
-        "props": "always",
-        "children": "ignore"
-      }
-    ],
-    "react/jsx-equals-spacing": [
-      2,
-      "never"
-    ],
-    "react/jsx-key": 2,
-    "react/jsx-no-bind": [
-      2,
-      {
-        "ignoreRefs": true,
-        "allowArrowFunctions": true
-      }
-    ],
-    "react/jsx-no-duplicate-props": 2,
-    "react/jsx-no-literals": [
-      "error",
-      {
-        "noStrings": false
-      }
-    ],
-    "react/jsx-no-undef": 2,
-    "react/jsx-sort-props": 0,
-    "react/jsx-uses-react": 2,
-    "react/jsx-uses-vars": 2,
-    "react/no-did-mount-set-state": 2,
-    "react/no-did-update-set-state": 2,
-    "react/no-direct-mutation-state": 2,
-    "react/no-is-mounted": 2,
-    "react/no-multi-comp": 0,
-    "react/no-unknown-property": 2,
-    "react/prop-types": 2,
-    "react/react-in-jsx-scope": 2,
-    "react/self-closing-comp": 2,
-    "react/jsx-wrap-multilines": [
-      "error",
-      {
-        "declaration": "parens-new-line",
-        "assignment": "parens-new-line",
-        "return": "parens-new-line",
-        "arrow": "parens-new-line"
-      }
-    ],
-    "space-infix-ops": 0
-  }
+	"rules": {
+		"default-case": 0,
+		"max-len": [
+			1,
+			120,
+			2,
+			{
+				"ignoreComments": true
+			}
+		],
+		"no-cond-assign": [2, "except-parens"],
+		"no-else-return": 0,
+		"no-param-reassign": 0,
+		"no-unused-vars": [
+			1,
+			{
+				"vars": "local",
+				"args": "none"
+			}
+		],
+		"quotes": 0,
+		"quote-props": [1, "consistent-as-needed"],
+		"radix": 0,
+		"react/display-name": 2,
+		"react/jsx-boolean-value": [2, "always"],
+		"react/jsx-curly-brace-presence": [
+			"error",
+			{
+				"props": "ignore",
+				"children": "ignore"
+			}
+		],
+		"react/jsx-equals-spacing": [2, "never"],
+		"react/jsx-key": 2,
+		"react/jsx-no-bind": [
+			2,
+			{
+				"ignoreRefs": true,
+				"allowArrowFunctions": true
+			}
+		],
+		"react/jsx-no-duplicate-props": 2,
+		"react/jsx-no-literals": [
+			"error",
+			{
+				"noStrings": false
+			}
+		],
+		"react/jsx-no-undef": 2,
+		"react/jsx-sort-props": 0,
+		"react/jsx-uses-react": 2,
+		"react/jsx-uses-vars": 2,
+		"react/no-did-mount-set-state": 2,
+		"react/no-did-update-set-state": 2,
+		"react/no-direct-mutation-state": 2,
+		"react/no-is-mounted": 2,
+		"react/no-multi-comp": 0,
+		"react/no-unknown-property": 2,
+		"react/prop-types": 2,
+		"react/react-in-jsx-scope": 2,
+		"react/self-closing-comp": 2,
+		"react/jsx-wrap-multilines": [
+			"error",
+			{
+				"declaration": "parens-new-line",
+				"assignment": "parens-new-line",
+				"return": "parens-new-line",
+				"arrow": "parens-new-line"
+			}
+		],
+		"space-infix-ops": 0
+	}
 }

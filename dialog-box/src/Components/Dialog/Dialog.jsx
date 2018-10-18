@@ -2,26 +2,42 @@ import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 
 import './Dialog.css';
-// import Title from './Components/Title/Title';
-// import Body from './Components/Body/Body';
-// import Footer from './Components/Footer/Footer';
+import Title from '../Title/Title';
+import Body from '../Body/Body';
+import Footer from '../Footer/Footer';
 
-function DialogBox({ children }) {
-  const files = Children.toArray(children);
-  console.log(files);
-  return (
-    <div className="dialog">
-      {files.map(child => <span key={child.key} className={child.type.name}>{child.props.children}</span>)}
-    </div>
-  );
-}
+const DialogBox = ({ children }) => (
+  <div className="dialog">
+    {children.map(child => (
+      <DialogChildren key={child.id} component={child} />
+    ))}
+  </div>
+);
+
+const DialogChildren = ({ component }) => (
+  <span>
+    {component.props.children || component.type.defaultProps.children}
+  </span>
+);
 
 DialogBox.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.arrayOf(
+    PropTypes.element,
+    PropTypes.string,
+  ),
 };
 
 DialogBox.defaultProps = {
-  children: PropTypes.node,
+  children: [
+    <Title key={1} />,
+    <Body key={2} />,
+    <Footer key={3} />,
+  ],
 };
+
+/* <Title title={<h1>This Is Important</h1>} />,
+    <Body text={<span>Here is some important text or error or something.</span>} />,
+    <Footer footer={<button type="button">Close</button>} />, */
+
 
 export default DialogBox;

@@ -1,0 +1,54 @@
+.avatar {
+	border-radius: 5px;
+	height: 48px;
+	margin-right: 10px;
+	width: 48px;
+}
+
+.buttons {
+	color: #aab8c2;
+	display: flex;
+	font-size: 1.4em;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+.like-count,
+.retweet-count {
+	bottom: 2px;
+	font-size: 13px;
+	font-weight: bold;
+	margin-left: 6px;
+	position: relative;
+}
+
+.handle {
+	color: #8899a6;
+	font-size: 13px;
+}
+
+.name {
+	margin-bottom: 0.5em;
+	margin-right: 0.3em;
+}
+
+.time {
+	color: #8899a6;
+	padding-left: 0.3em;
+}
+
+.time::before {
+	content: '\00b7';
+	padding-right: 0em;
+}
+
+.tweet {
+	border: 1px solid #ccc;
+	display: flex;
+	font-family: 'Helvetica', arial, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	min-height: 68px;
+	padding: 10px;
+	width: 512px;
+}

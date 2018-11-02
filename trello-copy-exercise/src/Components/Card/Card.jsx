@@ -1,26 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Card.css';
 
-import CardTitle from '../CardTitle/CardTitle';
 import CardItem from '../CardItem/CardItem';
 import OptionsButton from '../OptionsButton/OptionsButton';
 import AddCard from '../AddCard/AddCard';
 
 const Card = ({ title, children }) => (
-  <main className="main-card">
-    <CardTitle title={title} />
+  <section className="single-card">
+    <h1 className="card-title">
+      <strong>{title}</strong>
+    </h1>
     <OptionsButton />
     <ul className="cards">
-      {React.Children.toArray(children).map(item => (
+      {children.map(item => (
         <CardItem key={item.id} text={item.text} />
       ))}
     </ul>
     <AddCard />
-  </main>
+  </section>
 );
 
 Card.propTypes = {
-  items: PropTypes.oneOfType([PropTypes.shape(), PropTypes.arrayOf(PropTypes.object)]).isRequired,
+  title: PropTypes.string.isRequired,
+  children: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default Card;

@@ -1,0 +1,61 @@
+#root {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.wrapper {
+  width: 45rem;
+}
+
+.banner {
+  align-items: center;
+  font-size: 14px;
+  background-color: #ff6600;
+  display: flex;
+  width: 100%;
+  height: 1.5rem;
+  /* justify-content: flex-start; */
+  /* grid-template-rows: 1.5rem;
+  grid-template-columns: 24px 125px repeat(6, 75px) 2fr;
+  grid-template-areas: "icon site new comments show ask jobs submit login"; */
+  /* justify-items: center; */
+}
+
+.article {
+  align-items: center;
+  display: grid;
+  grid-template-rows: 24px 24px;
+  grid-template-columns: 1fr;
+}
+
+.article-link-domain {
+  color: #828294;
+  margin-left: 0.5rem;
+}
+
+.article-title,
+.article-data {
+  font-size: 14px;
+}
+
+.article-data {
+  color: #828294;
+}
+
+.site {
+  margin-left: 0.25rem;
+}
+.banner span {
+  margin-left: 0.5rem;
+}
+
+.site-icon {
+  border: 1px solid white;
+  margin: 2px;
+}
+
+.news-list {
+  background-color: #f6f6ef;
+  width: 100%;
+}

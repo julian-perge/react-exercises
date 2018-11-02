@@ -1,0 +1,78 @@
+:root {
+	--background-color: #e5e5e5;
+	--add-card-color: #919191;
+	--border-color: #00adcc;
+	--card-title-color: #4c4c4c;
+	--base-left-right-margin: 0.5rem;
+}
+
+.all-cards {
+	display: flex;
+	flex-direction: row;
+}
+
+.single-card {
+	align-items: center;
+	background-color: var(--background-color);
+	border: 3px solid var(--border-color);
+	border-radius: 3px;
+	display: grid;
+	grid-template-areas:
+		'title options'
+		'cards cards'
+		'add-card add-card';
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 2.5rem 3fr 2rem;
+	height: 100%;
+	margin: 0.5rem;
+	width: 287px;
+}
+
+.card-title {
+	align-items: center;
+	display: flex;
+	color: var(--card-title-color);
+	grid-area: title;
+	height: 100%;
+	margin-left: 0.75rem;
+}
+
+/* options button */
+.fas.fa-ellipsis-h {
+	align-self: center;
+	color: var(--add-card-color);
+	font-size: 0.75rem;
+	grid-area: options;
+	justify-self: flex-end;
+	margin-right: var(--base-left-right-margin);
+}
+
+.cards {
+	grid-area: cards;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.card {
+	align-items: center;
+	background-color: white;
+	border-radius: 0.25rem;
+	display: flex;
+	height: 100%;
+	margin: 0.25rem var(--base-left-right-margin);
+	padding: var(--base-left-right-margin);
+}
+
+/* plus sign */
+.fas.fa-plus {
+	font-size: 0.75rem;
+}
+
+.add-card {
+	color: var(--add-card-color);
+	font-size: 0.9rem;
+	grid-area: add-card;
+	margin-left: var(--base-left-right-margin);
+}

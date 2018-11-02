@@ -2,8 +2,8 @@ import React from 'react';
 
 const AddCard = () => (
   <span className="add-card">
-    {'Add a card'}
-    <i className="fas fa-ellipsis-h" />
+    <i className="fas fa-plus" />
+    {' Add another card'}
   </span>
 );
 

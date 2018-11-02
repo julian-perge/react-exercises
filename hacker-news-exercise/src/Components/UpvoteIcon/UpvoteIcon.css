@@ -1,0 +1,3 @@
+.upvote-icon::before {
+	background-image: url('grayarrow.gif');
+}

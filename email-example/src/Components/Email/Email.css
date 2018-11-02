@@ -6,7 +6,7 @@
 	grid-template-rows: repeat(2, 33px);
 	grid-template-areas:
 		'checkbox thumbtack sender subject date'
-		'checkbox thumbtack message message message';
+		'checkbox thumbtack message message date';
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 }
@@ -36,9 +36,13 @@
 
 .date {
 	grid-area: date;
+	height: 100%;
+	justify-self: right;
 }
 
 .message {
-	grid-area: message;
 	color: #777777;
+	grid-area: message;
+	overflow-x: hidden;
+	white-space: nowrap;
 }

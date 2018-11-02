@@ -5,7 +5,7 @@ import Moment from 'moment';
 // Time format is yyyy-mm-dd hh:mm:ss
 
 const Date = ({ date }) => {
-	const dateString = Moment(date).fromNow();
+	const dateString = Moment(date).fromNow("MMM");
 	return <span className="date">{dateString}</span>;
 };
 

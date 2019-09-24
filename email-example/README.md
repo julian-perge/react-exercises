@@ -13,7 +13,7 @@ Screenshot of an example below.
 It should accept an email prop, which contains the sender, subject, date, and message.
 ```
 
-<img src="https://i.imgur.com/heBkJ96.png" alt="image of email example to base creation on"
+<img src="https://i.imgur.com/heBkJ96.png" alt="image of email example to base creation on">
 
 ## Installing
 

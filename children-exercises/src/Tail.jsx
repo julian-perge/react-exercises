@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 // Destructure props to just value to display name of person to render
 function ListItem({ value }) {
-	return <li className="person">{value}</li>;
+	return (<li className="person">{value}</li>);
 }
 
 /*
@@ -18,7 +18,7 @@ function Tail({ number, children }) {
 	const people = Children.toArray(children);
 	const peopleToRender = [];
 	// start at 1 to properly select the last child of the array
-	for (let i = number; i > 0; --i) {
+	for (let i = number; i < people.length; i += 1) {
 		// add {number} of people to peopleToRender array
 		// with key value being the current iteration
 		peopleToRender.push(<ListItem key={i} value={people[people.length - i]} />);
@@ -32,7 +32,7 @@ function Tail({ number, children }) {
 
 Tail.propTypes = {
 	// node instead of element since we are not passing a single ReactElement
-	children: PropTypes.node.isRequired
+	children: PropTypes.node.isRequired,
 };
 
 export default Tail;

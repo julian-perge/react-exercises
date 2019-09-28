@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-function CommitMessage({ message }) {
-	return <td className="commit-message">{message}</td>;
-}
+const CommitMessage = ({ commit }) => (
+	<td className="commit-message">{commit.message}</td>
+);
 
 CommitMessage.propTypes = {
-	message: PropTypes.string.isRequired
+	commit: PropTypes.object.isRequired
 };
 
 export default CommitMessage;

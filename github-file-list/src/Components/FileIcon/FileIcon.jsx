@@ -1,23 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-import folderIco from './folder.svg';
-import fileIco from './file.svg';
+// This allows to import .svg files without any wonky workaround
+// https://github.com/facebook/create-react-app/issues/1388#issuecomment-440421025
+import { ReactComponent as FolderIco } from './folder.svg';
+import { ReactComponent as FileIco } from './file.svg';
 
-function FileIcon({ type }) {
+function FileIcon({ file }) {
 	return (
 		<td className="file-icon">
-			{type === 'folder' ? (
-				<img className="file-icon_img" src={folderIco} alt="folder icon" />
-			) : (
-				<img className="file-icon" src={fileIco} alt="file icon" />
-			)}
+			{file.type === 'folder' ? <FolderIco /> : <FileIco />}
 		</td>
 	);
 }
 
 FileIcon.propTypes = {
-	type: PropTypes.string.isRequired
+	file: PropTypes.object.isRequired
 };
 
 export default FileIcon;

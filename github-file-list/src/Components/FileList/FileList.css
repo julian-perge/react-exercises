@@ -1,43 +1,44 @@
-table.files {
+table.file-list {
 	background-color: #fff;
 	border-radius: 2px;
 	color: #333;
+	font-family: Helvetica, sans-serif;
 	margin: 0 auto;
 	border: 1px solid #ccc;
 	border-collapse: collapse;
 	width: 980px;
 }
 
-table.files td {
+table.file-list td {
 	border-top: 1px solid #eaecef;
 	line-height: 20px;
 	padding: 6px 3px;
 }
 
-table.files td.file-icon {
+table.file-list .file-icon {
 	color: rgba(3, 47, 98, .55);
 	padding-left: 10px;
 	padding-right: 2px;
-	width: 17px;
+	width: 1.625rem;
 }
 
-table.files td.file-icon .file-icon_img {
+table.file-list .file-icon .file-icon_img {
 	height: 16px;
 	width: 14px;
 }
 
-table.files td.file-name {
+table.file-list .file-name {
 	max-width: 180px;
 }
 
-table.files td.commit-message {
+table.file-list .commit-message {
 	max-width: 442px;
 	padding-left: 10px;
 	overflow: hidden;
 	color: #6a737d;
 }
 
-table.files td.updated_at {
+table.file-list .age {
 	color: #6a737d;
 	padding-right: 10px;
 	text-align: right;

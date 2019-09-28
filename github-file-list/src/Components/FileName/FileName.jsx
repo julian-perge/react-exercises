@@ -1,14 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import FileIcon from '../FileIcon/FileIcon';
 
 function FileName({ file }) {
-	return (
-		<>
-			<FileIcon file={file} />
-			<td className="file-name">{file.name}</td>
-		</>
-	);
+	return <span className="file-name">{file.name}</span>;
 }
 
 FileName.propTypes = {

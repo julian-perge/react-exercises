@@ -7,11 +7,7 @@ import { ReactComponent as FolderIco } from './folder.svg';
 import { ReactComponent as FileIco } from './file.svg';
 
 function FileIcon({ file }) {
-	return (
-		<td className="file-icon">
-			{file.type === 'folder' ? <FolderIco /> : <FileIco />}
-		</td>
-	);
+	return <>{file.type === 'folder' ? <FolderIco /> : <FileIco />}</>;
 }
 
 FileIcon.propTypes = {

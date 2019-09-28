@@ -5,7 +5,7 @@ import FileListItem from '../FileListItem/FileListItem';
 import './FileList.css';
 
 const FileList = ({ files }) => (
-	<table className="files">
+	<table className="file-list">
 		<tbody>
 			<>
 				{files.map((file) => (

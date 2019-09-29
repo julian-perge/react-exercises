@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Message({ text }) {
-  return <div className="message">{text}</div>;
+	return <p className="message">{text}</p>;
 }
 
 Message.propTypes = {
-  text: PropTypes.string,
+	text: PropTypes.string
 };
 
 Message.defaultProps = {
-  text: '',
+	text: ''
 };
 
 export default Message;

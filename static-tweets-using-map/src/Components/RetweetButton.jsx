@@ -21,8 +21,4 @@ RetweetButton.propTypes = {
 	count: PropTypes.number
 };
 
-RetweetButton.defaultProps = {
-	count: 0
-};
-
 export default RetweetButton;

@@ -19,10 +19,14 @@
 	margin-top: 10px;
 }
 
+.buttons,
+.button {
+	color: #657786;
+}
+
 .button {
 	background: transparent;
 	border: 0;
-	color: #657786;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 16px;
@@ -59,11 +63,14 @@ input::-moz-focus-inner {
 }
 
 .more-options-icon-button {
+	align-self: flex-end;
 	display: inline-block;
-	text-align: end;
+	font-size: 16px;
+	line-height: 1;
 	margin: -2px -9px 0 auto;
 	min-width: inherit;
-	align-self: flex-end;
+	position: relative;
+	text-align: end;
 }
 
 .reply-icon-button,
@@ -77,7 +84,6 @@ input::-moz-focus-inner {
 
 .like-count,
 .retweet-count {
-	color: #657786;
 	display: inline-block;
 	font-size: 12px;
 	font-weight: bold;

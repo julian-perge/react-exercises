@@ -46,18 +46,6 @@ const multipleTweets = [
 	}
 ];
 
-const testTweet = {
-	author: {
-		handle: 'Seto Kaiba',
-		name: 'IAMA Cat person'
-	},
-	gravatar: 'd71cdfb0b46c835e7dfe7f846d0d2398',
-	likes: 5,
-	message: 'Something about cats.',
-	retweets: 2,
-	timestamp: '2018-01-28 03:52:30'
-};
-
 ReactDOM.render(
 	<Tweets tweets={multipleTweets} />,
 	document.getElementById('root')

@@ -14,8 +14,4 @@ LikeButton.propTypes = {
 	count: PropTypes.number
 };
 
-LikeButton.defaultProps = {
-	count: 0
-};
-
 export default LikeButton;

@@ -1,0 +1,113 @@
+:root {
+	--background-color: #ebecf0;
+	--add-card-color: #5e6c84;
+	--border-color: #00adcc;
+	--card-title-color: #4c4c4c;
+	--base-left-right-margin: 0.5rem;
+}
+
+.all-cards {
+	display: flex;
+	flex-direction: row;
+}
+
+.single-card {
+	align-items: center;
+	background-color: var(--background-color);
+	border-radius: 3px;
+	border: 3px solid var(--border-color);
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin: 0 4px;
+	max-height: 100vh;
+	min-height: 0;
+	position: relative;
+	vertical-align: top;
+	white-space: normal;
+	width: 272px;
+}
+
+.h1-card-title {
+	align-items: center;
+	color: var(--card-title-color);
+	display: flex;
+	grid-area: title;
+	justify-content: space-between;
+	min-height: 20px;
+	padding: 6px 8px;
+}
+
+.card-title {
+	background: transparent;
+	border-radius: 3px;
+	box-shadow: none;
+	font-weight: 600;
+	height: 28px;
+	margin: -4px 0;
+	max-height: 256px;
+	min-height: 20px;
+	overflow-wrap: break-word;
+	overflow: hidden;
+	padding: 4px 8px;
+	resize: none;
+}
+
+/* options button */
+.options-button {
+	color: #6b778c;
+	grid-area: title;
+	padding: 6px;
+}
+
+.cards {
+	display: flex;
+	flex-direction: column;
+	grid-area: cards;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	margin: 0 4px;
+	padding: 0 4px;
+}
+
+.card {
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 0 1px 0 rgba(9, 30, 66, .25);
+	color: #172b4d;
+	cursor: pointer;
+	display: block;
+	margin-bottom: 8px;
+	max-width: 300px;
+	overflow: hidden;
+	text-decoration: none;
+	padding: var(--base-left-right-margin);
+	white-space: normal;
+	word-wrap: break-word;
+}
+
+.add-card {
+	border-radius: 0 0 3px 3px;
+	color: var(--add-card-color);
+	display: block;
+	flex: 0 0 auto;
+	font-size: 0.9rem;
+	grid-area: add-card;
+	/* margin-left: var(--base-left-right-margin); */
+	padding: 6px;
+	position: relative;
+	text-decoration: underline;
+	user-select: none;
+	white-space: normal;
+}
+
+.icon-add {
+	color: #6b778c;
+	margin-right: 2px;
+	height: 20px;
+	font-size: 16px;
+	line-height: 20px;
+	width: 20px;
+}

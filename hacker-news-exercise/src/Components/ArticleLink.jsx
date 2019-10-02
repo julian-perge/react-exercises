@@ -2,18 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function ParseUrl(link) {
-	const regExp = /^(?:(?:(([^:/#?]+:)?(?:(?:\/\/)(?:(?:(?:([^:@/#?]+)(?::([^:@/#?]*))?)@)?(([^:/#?\][]+|\[[^/\]@#?]+\])(?::([0-9]+))?))?)?)?((?:\/?(?:[^/?#]+\/+)*)(?:[^?#]*)))?(\?[^#]+)?)(#.*)?/g;
-	console.log(link.match(regExp));
-	return 'test';
+	const regExp = /^(?:(?![^:@]+:[^:@/]*@)([^:/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#/]*\.[^?#/.]+(?:[?#]|$)))*\/?)?([^?#/]*))(?:\?([^#]*))?(?:#(.*))?)/;
+	const parsedUrl = link.match(regExp)[2];
+	// console.log(link.match(regExp)[2]);
+	return `${parsedUrl.startsWith('www') ? `${parsedUrl.substring(4)}` : parsedUrl}`;
 }
 
 function ArticleLink({ article }) {
+	const parsedURL = ParseUrl(article.link);
 	return (
 		<>
-			<a className="article-link" href={article.link}>
+			<a href={`from?site=${parsedURL}`} className="article-link">
 				{article.title}
 				<span className="article-link-domain">
-					{ParseUrl(article.link.match(/[^/][^/]*/gi)[1])}
+					{'('}
+					{parsedURL}
+					{')'}
 				</span>
 			</a>
 		</>

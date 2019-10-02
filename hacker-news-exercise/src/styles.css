@@ -85,6 +85,7 @@ td {
 	background-color: #f6f6ef;
 }
 
+.article-link-domain:hover,
 .article-user:hover,
 .number-of-comments:hover,
 .time:hover {

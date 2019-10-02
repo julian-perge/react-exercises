@@ -23,7 +23,7 @@ const listOfArticles = [
 		title:
 			'Validating UTF-8 bytes using only 0.45 cycles per byte (AVX edition)',
 		link:
-			'lemire.me/blog/2018/10/19/validating-utf-8-bytes-using-only-0-45-cycles-per-byte-avx-edition/',
+			'https://lemire.me/blog/2018/10/19/validating-utf-8-bytes-using-only-0-45-cycles-per-byte-avx-edition/',
 		upvotes: 22,
 		user: {
 			name: 'akarambir'

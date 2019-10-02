@@ -2,10 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function ParseUrl(link) {
+	// http://blog.stevenlevithan.com/archives/parseuri
+	// https://stackoverflow.com/a/24527267
 	const regExp = /^(?:(?![^:@]+:[^:@/]*@)([^:/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#/]*\.[^?#/.]+(?:[?#]|$)))*\/?)?([^?#/]*))(?:\?([^#]*))?(?:#(.*))?)/;
 	const parsedUrl = link.match(regExp)[2];
-	// console.log(link.match(regExp)[2]);
-	return `${parsedUrl.startsWith('www') ? `${parsedUrl.substring(4)}` : parsedUrl}`;
+	return `${
+		parsedUrl.startsWith('www')
+			? `${parsedUrl.substring(4)}`
+			: parsedUrl
+	}`;
 }
 
 function ArticleLink({ article }) {

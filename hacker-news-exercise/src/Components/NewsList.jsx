@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Article from './Article';
+import Banner from './Banner';
 
 import '../styles.css';
 import icon from '../y18.gif';
@@ -13,17 +14,8 @@ const NewsList = ({ articles }) => (
 				src={icon}
 				alt="white letter Y surrounded by orange"
 			/>
-			<strong className="site">Hacker News</strong>
-			<span className="site-children__new">new</span>
-			{'|'}
-			<span className="site-children__comments">comments</span>
-			<span className="site-children__show">show</span>
-			<span className="site-children__ask">ask</span>
-			<span className="site-children__jobs">jobs</span>
-			{' | '}
-			<span className="site-children__submit">submit</span>
-			{'|'}
-			<span className="site-children__login">login</span>
+			<strong className="site-name">Hacker News</strong>
+			<Banner bannerItems={items} />
 		</header>
 		<table className="news-list">
 			<tbody>
@@ -46,3 +38,15 @@ NewsList.propTypes = {
 };
 
 export default NewsList;
+
+const items = [
+	'new',
+	'past',
+	'comments',
+	'ask',
+	'show',
+	'jobs',
+	'submit',
+	'testing',
+	'login'
+];

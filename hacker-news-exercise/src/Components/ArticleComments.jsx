@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ArticleComments = ({ numberOfComments }) => (
-	<span className="number-of-comments">
+	<a className="number-of-comments">
 		{`${numberOfComments} ${numberOfComments === 1 ? ' comment' : ' comments'}`}
-	</span>
+	</a>
 );
 
 ArticleComments.propTypes = {

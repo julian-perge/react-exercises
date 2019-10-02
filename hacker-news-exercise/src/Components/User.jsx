@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const User = ({ user }) => <span className="article-user">{user.name}</span>;
+const User = ({ user }) => <a className="article-user">{user.name}</a>;
 
 User.propTypes = {
 	user: PropTypes.shape({

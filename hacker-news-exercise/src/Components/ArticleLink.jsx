@@ -9,16 +9,6 @@ function ParseUrl(link) {
 }
 
 function ArticleLink({ article }) {
-	const websites = async () => {
-		const response = await fetch(
-			'https://www.randomlists.com/data/websites.json'
-		);
-		const myJson = await response.json();
-		console.log(`json ${myJson}`);
-	};
-
-	console.log(`lame ${websites}`);
-
 	return (
 		<>
 			<a className="article-link" href={article.link}>

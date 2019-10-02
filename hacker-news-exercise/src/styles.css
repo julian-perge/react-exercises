@@ -25,14 +25,35 @@ td {
 	font-size: 14px;
 	background-color: #ff6600;
 	display: flex;
-	height: 1.5rem;
+	flex-direction: row;
+	width: 100%;
 }
+
+.site-name {
+	margin: 0 4px;
+	min-width: 96px;
+}
+
+.banner-item {
+	margin: 0 8px;
+}
+
+.news-list {
+	margin-top: 10px;
+}
+
+.upvote-icon {
+	padding: 0 1px;
+}
+
 
 .article {
 	align-items: center;
 	display: grid;
-	grid-template-rows: 24px 24px;
-	grid-template-columns: 1fr;
+	grid-template: 'title title'
+								 '. data' 100% / 30px;
+	margin-bottom: 5px;
+	width: 100%;
 }
 
 
@@ -41,9 +62,9 @@ td {
 	margin-left: 0.5rem;
 }
 
-/* .article-title {
-	font-size: 16px;
-} */
+.article-title {
+	grid-area: title;
+}
 
 .article-position {
 	padding-left: 4px;
@@ -51,22 +72,25 @@ td {
 
 .article-data {
 	color: #828294;
-}
-
-.site {
-	margin-left: 0.25rem;
-	font-size: 10pt;
-}
-
-.banner span {
-	margin-left: 0.5rem;
+	grid-area: data;
 }
 
 .site-icon {
 	border: 1px solid #fff;
 	margin: 2px;
+	grid-area: icon;
 }
 
 .background {
 	background-color: #f6f6ef;
+}
+
+.article-user:hover,
+.number-of-comments:hover,
+.time:hover {
+	text-decoration: underline;
+}
+
+.time {
+	margin-left: 4px;
 }

@@ -15,9 +15,12 @@ const ArticleItem = ({ article, rank }) => (
 				<ArticleUpvotes upvotes={article.upvotes} />
 				{' by  '}
 				<User user={article.user} />
-				<Time time={article.time_posted} />
+				<Time time={article.time_posted} id={article.id} />
 				{' | hide | '}
-				<ArticleComments numberOfComments={article.num_of_comments} />
+				<ArticleComments
+					numberOfComments={article.num_of_comments}
+					id={article.id}
+				/>
 			</section>
 		</td>
 	</tr>

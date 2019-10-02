@@ -5,7 +5,7 @@
 	margin-top: 0.5rem;
 }
 
-a:link {
+.article-link {
 	color: #000000;
 	text-decoration: none;
 }

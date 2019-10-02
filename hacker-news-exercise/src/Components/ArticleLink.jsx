@@ -2,10 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function ParseUrl(link) {
-	if (link.startsWith('www.')) {
-		link = link.substring(4);
-	}
-	return `(${link})`;
+	const regExp = /^(?:(?:(([^:/#?]+:)?(?:(?:\/\/)(?:(?:(?:([^:@/#?]+)(?::([^:@/#?]*))?)@)?(([^:/#?\][]+|\[[^/\]@#?]+\])(?::([0-9]+))?))?)?)?((?:\/?(?:[^/?#]+\/+)*)(?:[^?#]*)))?(\?[^#]+)?)(#.*)?/g;
+	console.log(link.match(regExp));
+	return 'test';
 }
 
 function ArticleLink({ article }) {

@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import PopularGenres from './Components/PopularGenres/PopularGenres';
+import PopularGenres from './Components/PopularGenres';
 
-import "./layout.css";
-import "./minireset.min.css";
+import arrayOfGenres from './Data/listOfGenres';
 
-ReactDOM.render(<PopularGenres />, document.getElementById('root'));
+import './layout.css';
+import './minireset.min.css';
+import './styles.css';
+
+ReactDOM.render(<PopularGenres genres={arrayOfGenres} />, document.getElementById('root'));

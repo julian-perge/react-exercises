@@ -23,7 +23,8 @@
 	"plugins": [
 		"import",
 		"jsx-a11y",
-		"react"
+		"react",
+		"react-hooks"
 	],
 	"rules": {
 		"arrow-body-style": [
@@ -151,6 +152,8 @@
 		"radix": 0,
 		"react/display-name": 1,
 		"react/forbid-prop-types": 0,
+		"react-hooks/exhaustive-deps": "warn",
+		"react-hooks/rules-of-hooks": "error",
 		"react/jsx-filename-extension": [
 			1,
 			{

@@ -1,0 +1,17 @@
+.layout {
+	width: 640px;
+	height: 480px;
+	background-color: #fff;
+	display: flex;
+}
+
+.content {
+	height: 100%;
+	overflow: hidden;
+	background-color: #000;
+	width: 100%;
+}
+
+.sidebar {
+	background-color: #232323;
+}

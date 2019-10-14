@@ -1,30 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import AudioControls from './AudioControls';
+import AudioControls2 from './AudioControls2';
+import Badge from './Badge';
 import LifecycleDemo from './LifecycleDemo';
+import MultiCounter from './MultiCounter';
+import OneTimeButton from './OneTimeButton';
+import RandomList from './RandomList';
+import Reddit from './Reddit';
+import StepTracker from './StepTracker';
 
-class ErrorCatcher extends React.Component {
-	state = { error: null };
+import './layout.css';
+import './minireset.min.css';
 
-	componentDidCatch(error, info) {
-		console.log('[componentDidCatch]', error);
-		this.setState({ error: info.componentStack });
-	}
-
-	render() {
-		if (this.state.error) {
-			return (
-				<div>
-					{`An error occurred: ${this.state.error}`}
-				</div>
-			);
-		}
-		return this.props.children;
-	}
-}
 ReactDOM.render(
-	<ErrorCatcher>
+	<>
+		<AudioControls />
+		<hr />
+		<AudioControls2 />
+		<hr />
+		<Badge counter={1} />
+		<hr />
 		<LifecycleDemo />
-	</ErrorCatcher>,
+		<hr />
+		<MultiCounter />
+		<hr />
+		<OneTimeButton onClick={() => alert('hi')} />
+		<hr />
+		<RandomList />
+		<hr />
+		<Reddit subreddit="reactjs" />
+		<hr />
+		<StepTracker />
+	</>,
 	document.querySelector('#root')
 );

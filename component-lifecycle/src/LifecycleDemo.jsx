@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export default class LifecycleDemo extends React.Component {
 	// Initialize state first
 	// (happens before constructor)

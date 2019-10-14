@@ -1,0 +1,27 @@
+section {
+	display: flex;
+	margin: 16px 0;
+	align-items: center;
+}
+
+.btn {
+	height: 28px;
+	margin: 0 8px;
+	width: 28px;
+}
+
+.audio-display-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 100px;
+}
+
+.audio-display-numbers {
+	font-size: 1.125rem;
+}
+
+.audio-display-text {
+	font-size: 0.625rem;
+}
+

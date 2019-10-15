@@ -1,0 +1,105 @@
+#root {
+	display: flex;
+}
+
+.pizza-order {
+	align-items: center;
+	border: 8px ridge rgba(255, 0, 0, 1);
+	display: grid;
+	grid-template-areas: 'header header'
+		'size topping'
+		'gluten gluten'
+		'instruct instruct'
+		'sendOrder sendOrder';
+	grid-template-rows: 64px 64px 32px 160px 32px;
+	grid-template-columns: 50%;
+	width: 640px;
+}
+
+#pizzaHeader {
+	align-items: center;
+	border-bottom: 2px groove rgb(255, 0, 0);
+	display: flex;
+	grid-area: header;
+	justify-content: center;
+}
+
+#sectionSizes,
+#sectionToppings {
+	border-bottom: 2px ridge rgb(255, 0, 0);
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: space-around;
+	padding: 0 8px;
+}
+
+#sectionSizesRadios {
+	display: flex;
+	justify-content: space-between;
+}
+
+.input-item {
+	margin-right: 4px;
+}
+
+#sectionSizes {
+	border-right: 2px dashed rgb(255, 0, 0);
+	grid-area: size;
+}
+
+#sectionToppings {
+	grid-area: topping;
+}
+
+#selectToppings {
+	width: 80%;
+}
+
+#checkboxGluten {
+	grid-area: gluten;
+	justify-self: center;
+}
+
+#sectionInstructions {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	grid-area: instruct;
+	height: 100%;
+	justify-content: space-between;
+}
+
+#charCount {
+	/* width: 100%; */
+}
+
+#textareaInstruction {
+	resize: none;
+}
+
+#btnSendOrder {
+	grid-area: sendOrder;
+	justify-self: center;
+	width: 128px;
+}
+
+#headerTitle {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.section-header {
+	font-size: 1.25rem;
+	font-weight: bold;
+	/* margin: 8px; */
+}
+
+#pizzaLogo {
+	/* height: 100%; */
+	width: 64px;
+}
+
+.list-order-item {
+	border: 1px solid #000;
+}

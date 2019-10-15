@@ -1,0 +1,70 @@
+[
+	{
+		"id": 0,
+		"name": "Bacon"
+	},
+	{
+		"id": 1,
+		"name": "Beef"
+	},
+	{
+		"id": 2,
+		"name": "Grilled Chicken"
+	},
+	{
+		"id": 3,
+		"name": "Ham"
+	},
+	{
+		"id": 4,
+		"name": "Italian Sausage"
+	},
+	{
+		"id": 5,
+		"name": "Meatball"
+	},
+	{
+		"id": 6,
+		"name": "Pepperoni"
+	},
+	{
+		"id": 7,
+		"name": "Pork"
+	},
+	{
+		"id": 8,
+		"name": "Banana Peppers"
+	},
+	{
+		"id": 9,
+		"name": "Green Bell Pepers"
+	},
+	{
+		"id": 10,
+		"name": "Jalapeno Peppers"
+	},
+	{
+		"id": 11,
+		"name": "Mediterranean Black Olives"
+	},
+	{
+		"id": 12,
+		"name": "Mushrooms"
+	},
+	{
+		"id": 13,
+		"name": "Pineapple"
+	},
+	{
+		"id": 14,
+		"name": "Red Onions"
+	},
+	{
+		"id": 15,
+		"name": "Roasted Spinach"
+	},
+	{
+		"id": 16,
+		"name": "Roma Tomatoes"
+	}
+]

@@ -1,12 +1,13 @@
 import React from 'react';
 
-const PizzaOrder = ({ order }) => (
-	<ul className="list-order-item">
-		<li className="order-number">{`Order #: ${order.id}`}</li>
-		<li className="order-size">{`Size: ${order.oSize}`}</li>
-		<li className="order-topping">{`Topping: ${order.oToppings}`}</li>
-		<li className="order-gluten">{`Gluten: ${order.hasGluten}`}</li>
-		<li className="order-instructions">{`Instructions: ${order.oNote}`}</li>
+const PizzaOrder = ({ removeOrder, order }) => (
+	<ul className="list-order-items">
+		<button className="btn-remove-order" value={order.id} onClick={removeOrder} type="submit">X</button>
+		<li id="order-number">{`Order #: ${order.id}`}</li>
+		<li id="order-size">{`Size: ${order.size}`}</li>
+		<li id="order-topping">{`Topping: ${order.topping}`}</li>
+		<li id="order-gluten">{`Gluten: ${order.gluten}`}</li>
+		<li id="order-instructions">{`Instructions: ${order.instructions}`}</li>
 	</ul>
 );
 

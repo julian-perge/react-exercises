@@ -10,8 +10,10 @@ import SubmitOrder from './SubmitOrder';
 import '../CSS/styles.css';
 import PizzaOrders from './PizzaOrders';
 
+import listOfOrders from '../Data/listOfPizzaOrders.json';
+
 export default function OrderMenu({ listOfToppings }) {
-	const [orders, setOrders] = useState([]);
+	const [orders, setOrders] = useState(listOfOrders);
 	const [size, setSize] = useState('small');
 	const [topping, setTopping] = useState('');
 	const [gluten, setGluten] = useState(false);
@@ -39,13 +41,24 @@ export default function OrderMenu({ listOfToppings }) {
 	const addOrder = () => {
 		setOrders([...orders,
 			{
-				id: orders.length,
-				oSize: size,
-				oToppings: topping || 'zero',
-				hasGluten: gluten,
-				oNote: instructions.text
+				id: orders[orders.length - 1].id,
+				size,
+				topping,
+				gluten,
+				instructions: instructions.text
 			}
 		]);
+	};
+
+	const removeOrder = (event) => {
+		const orderToRemoveId = event.target.value;
+		// console.log(orderToRemoveId);
+		console.log(`original: ${orders}`);
+		const arrCopy = orders;
+		arrCopy.splice(orderToRemoveId, 1);
+		setOrders(() => arrCopy);
+		console.log(`copy: ${arrCopy}`);
+		console.log(`original2: ${orders}`);
 	};
 
 	return (
@@ -62,7 +75,7 @@ export default function OrderMenu({ listOfToppings }) {
 				<SubmitOrder onSubmit={addOrder} />
 			</div>
 			<div className="list-orders">
-				<PizzaOrders orders={orders} />
+				<PizzaOrders removeOrder={removeOrder} orders={orders} />
 			</div>
 		</>
 	);

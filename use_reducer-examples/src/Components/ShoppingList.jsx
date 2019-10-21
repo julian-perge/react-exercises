@@ -1,6 +1,7 @@
 import React, { useReducer, useRef } from 'react';
 
 const reducer = (state, action) => {
+	console.log(action);
 	switch (action.type) {
 	case 'add':
 		return [
@@ -10,6 +11,10 @@ const reducer = (state, action) => {
 				name: action.name
 			}
 		];
+	case 'remove':
+		return state.filter((_, index) => index !== action.index);
+	case 'clear':
+		return [];
 	default:
 		return state;
 	}
@@ -20,7 +25,7 @@ export default function ShoppingList() {
 	const [items, dispatch] = useReducer(reducer, []);
 
 	function handleSubmit(e) {
-		e.preventDefault();
+		e.preventDefault(); // prevent reloading the page when Enter is pressed.
 		dispatch({
 			type: 'add',
 			name: inputRef.current.value
@@ -30,12 +35,16 @@ export default function ShoppingList() {
 
 	return (
 		<>
-			<form onSubmit={handleSubmit}>
-				<input ref={inputRef} />
+			<form id="shoppingForm" onSubmit={handleSubmit}>
+				<input id="shoppingInput" ref={inputRef} />
 			</form>
-			<ul>
+			<button onClick={() => dispatch({ type: 'clear' })} type="button">Clear Shopping List</button>
+			<ul className="shopping-list">
 				{items.map((item, index) => (
-					<li key={item.id}>{item.name}</li>
+					<li className="shopping-list-item" key={item.id}>
+						{item.name}
+						<button onClick={() => dispatch({ type: 'remove', index })} type="button">X</button>
+					</li>
 				))}
 			</ul>
 		</>

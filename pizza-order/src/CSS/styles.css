@@ -102,8 +102,8 @@
 }
 
 .section-order-list {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	display: flex;
+	flex-wrap: wrap;
 	grid-gap: 8px;
 	height: 360px;
 	overflow-y: scroll;
@@ -112,9 +112,7 @@
 
 .list-order-items {
 	border: 1px solid #000;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	max-width: 320px;
 	position: relative;
 	padding: 4px;
 }
@@ -122,6 +120,7 @@
 .list-order-items li {
 	list-style: square inside;
 	margin: 2px 0;
+	min-width: 120px;
 }
 
 .btn-remove-order {

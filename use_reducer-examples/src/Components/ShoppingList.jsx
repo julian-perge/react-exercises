@@ -1,7 +1,6 @@
 import React, { useReducer, useRef } from 'react';
 
 const reducer = (state, action) => {
-	console.log(action);
 	switch (action.type) {
 	case 'add':
 		return [

@@ -16,6 +16,7 @@ test
 4. **credit_card**
 	* Create a `CreditCard` component based on this design. Style it up with CSS or inline styles. Accept a `cardInfo` prop that contains the person’s name, expiration date, credit card number, and bank name.
 <img src="https://i.imgur.com/78SxgrS.png" alt="credit card example" width="256" />
+
 5. **poster**
 	* Create a `Poster` component that takes `image, title`, and `text` as props. Google “demotivational posters” for inspiration. Render something like the image below.
 ![](https://i.imgur.com/urcqNZ0.png)
@@ -39,6 +40,7 @@ test
 12. **dialog-box**
 	* Create a `Dialog` component which accepts as children `Title, Body,` and `Footer` components, all optional. `Dialog` should verify that all of its children are one of these types, and should output something that looks like this:
 <img src="https://i.imgur.com/TLz2MBO.png" alt="dialog box example" width="512" />
+
 13. **github-file-list**
 	* Refactor the GitHub file listing example so that none of the components return a table cell `(<td>).` Every component should return a `<span>` or `<div>` instead. This makes them more reusable, and should also improve the code inside `FileList`. Change the CSS if necessary.
 	* Sometimes a file will contain a few related components when those components are always used together, and when they’re small (as in the `Nav/NavItem` example from earlier). But most of the time, in real applications, you’ll want to have only one component per file. Refactor the code from Exercise 1 to pull out components into separate files, using `import` and `export`.
@@ -47,14 +49,17 @@ test
 15. **trello-copy-exercise**
 	*  Work on rendering a single list of cards. For more practice, render multiple lists of cards side-by-side.
 <img src="https://i.imgur.com/DzodjWE.png" alt="trello card item" width="256" />
+
 16. **hacker-news-exercise**
 	* Implement the list of stories. For more practice, implement the header too.
 <img src="https://i.imgur.com/B6deX8g.png" alt="screenshot from hacker news website" width="768" />
+
 17. **pinterest//**
 
 18. **internet-radio-genre-cloud**
 	* Can you come up with a nice way of sizing the buttons so they get progressively larger?
 <img alt="screenshot of popular genres box from InternetRadio website" src="https://i.imgur.com/A3uQbE3.png" width="768" />
+
 19. **state-counter**
 	* Here’s a quick exercise: add a ‘Reset’ button to CountingParent that resets the counter to 0 when clicked. Just put the button directly inside CountingParent.
 	* Once that’s working, refactor your code to move the ‘Reset’ button down into Child. You’ll need to pass down the click handler for the Reset button, and make sure to bind the handler in the constructor.

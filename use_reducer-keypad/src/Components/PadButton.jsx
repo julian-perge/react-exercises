@@ -10,5 +10,6 @@ export default function PadButton({ onAction, padNumber }) {
 }
 
 PadButton.propTypes = {
+	onAction: PropTypes.func.isRequired,
 	padNumber: PropTypes.number.isRequired,
 };

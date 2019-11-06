@@ -1,24 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function CorrectPresses({ correctPresses, totalPresses }) {
+export default function CorrectPresses({ correctPresses, totalPresses }) {
 	function getNumberOfIndicators() {
 		const arrNew = [];
 		for (let index = 0; index < totalPresses; index += 1) {
-			arrNew.push(<span className={index >= correctPresses ? 'keypad-indicator' : 'keypad-indicator correct-indicator'} />);
+			arrNew.push(
+				<span
+					className={
+						index >= correctPresses
+							? 'keypad-indicator'
+							: 'keypad-indicator correct-indicator'
+					}
+				/>
+			);
 		}
 		return arrNew;
 	}
 
 	return (
 		<>
-			<h2 id="correctPresses">
-				{`Number of correct presses: ${
+			<span className="correct-presses">
+				{`${
 					correctPresses === totalPresses
 						? `You've unlocked the secret door!`
-						: `${correctPresses}/${totalPresses}`
+						: `Number of correct presses: ${correctPresses}/${totalPresses}`
 				}`}
-			</h2>
+			</span>
 			<section className="section-keypad-indicators">
 				{getNumberOfIndicators()}
 			</section>
@@ -27,7 +35,6 @@ function CorrectPresses({ correctPresses, totalPresses }) {
 }
 
 CorrectPresses.propTypes = {
-
+	correctPresses: PropTypes.number.isRequired,
+	totalPresses: PropTypes.number.isRequired,
 };
-
-export default CorrectPresses;

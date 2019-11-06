@@ -1,0 +1,54 @@
+.section-keypad {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.keypad {
+	align-items: center;
+	border: 1px solid #000;
+	display: grid;
+	grid-template: '. . .' 1fr '. . .' 1fr '. . .' 1fr '. zero .' 1fr / 1fr 1fr 1fr;
+	height: 512px;
+	justify-items: center;
+	width: 512px;
+}
+
+.pad-button {
+	box-shadow: 0 0 0 8px #000;
+	font-size: 3rem;
+	height: 80%;
+	width: 80%;
+}
+
+.pad-button:nth-last-child(1) {
+	grid-area: zero;
+}
+
+#keypadDetails {
+	border: 1px solid #000;
+	display: flex;
+	flex-direction: column;
+	font-size: 18px;
+	height: 128px;
+	justify-content: space-around;
+	padding: 2px;
+	width: 512px;
+}
+
+.section-keypad-indicators {
+	display: flex;
+	justify-content: space-around;
+}
+
+.keypad-indicator {
+	display: block;
+	background-color: #c40026;
+	border: 1px solid #101;
+	height: 64px;
+	width: 64px;
+}
+
+.correct-indicator {
+	background-color: #3fa244;
+}

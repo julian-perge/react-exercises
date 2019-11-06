@@ -64,3 +64,56 @@ test
 19. **state-counter**
 	* Here’s a quick exercise: add a ‘Reset’ button to CountingParent that resets the counter to 0 when clicked. Just put the button directly inside CountingParent.
 	* Once that’s working, refactor your code to move the ‘Reset’ button down into Child. You’ll need to pass down the click handler for the Reset button, and make sure to bind the handler in the constructor.
+20. **component-lifecycle/LifecycleDemo**
+	* Here’s an example that uses every lifecycle method. Run it, open up the browser console, click the button, and watch the console to see the order in which they’re called.
+21. **component-lifecycle/Reddit** 
+	* Another good option is the fetch() function built in to modern browsers. The Fetch API is part of the JavaScript standard. It requires an extra step to parse JSON responses, and it treats basically every response as success, including 404s and 500s, so handling errors involves a little more code. It’s also much more verbose if you need to do a POST/PUT/DELETE or another non-GET operation.
+22. **component-lifecycle/OneTimeButton**
+	* We’ll start off with a class and then change it into a function that uses the `useState` hook to retain state. Here’s a “button” component that can only be clicked once. Once you click it, the `clicked` state becomes true, and the button becomes disabled.
+23. **component-lifecycle/StepTracker**
+	* Update state based on previous state. Just like a Fitbit. Every time you take a step, simply click the button. At the end of the day, it will tell you how many steps you took.
+24. **component-lifecycle/RandomList**
+	* State as an Array. Remember that state can hold any value you want! Here’s an example of a list of random numbers. Clicking the button adds a new random number to the list.
+	* Create a RandomList component that shows a button, and a list of random numbers. When you click the button, add another random number to the list. Store the array of numbers with `useState`. The initial state should be an empty array.
+25. **component-lifecycle/MultiCounter**
+	* State as an Object. Since the setter function returned by `useState` will overwrite the state each time you call it, it works differently from the class-based `this.setState.` Recall that `this.setState` would shallow-merge the object you passed it, into the existing state, taking care not to clobber the other stuff in there. The `useState` setter, instead, will clobber everything. It replaces the entire value with whatever you pass in. Here’s an example where state is an object with a couple values.
+26. **component-lifecycle/AudioControls**
+27. **component-lifecycle/AudioControls2**
+	* Create a component called AudioControls with 4 pieces of state: “volume”, “bass”, “mid, and”treble”, each storing a value between 1 and 100.
+	* Display each value along with a label and a pair of +/- buttons for increasing and decreasing the value.
+	* Make two separate versions of this component: In the first, store the values in their own individual `useState` variables. In the second, store the values together in one state variable, an object that looks like this:
+	```
+	{
+		volume: <number>,	
+		bass: <number>,
+		mid: <number>,
+		treble: <number>
+	}
+	```
+	* The app should look something like this:
+	* ![](https://i.imgur.com/aCCOA6x.png)
+
+28. **component-lifecycle/Badge**
+	* You can respond when props change by implementing the `componentDidUpdate` lifecycle method and comparing the old value to the new one (you’ll learn more about lifecycle methods in a later chapter). If the value changed, you can set the “animating” state to `true`. Then in `render`, when “animating” is true, set a CSS class that triggers the animation. When “animating” is `false`, don’t set that class. Here’s what this might look like.
+
+29. **layout-sidebar-state**
+	* When you click the “Hide” button, the sidebar should disappear, which means something needs to set a showSidebar flag to false. This flag should be stored in state somewhere.
+	* Option 1, the showSidebar flag could reside in the Sidebar component. This way the Sidebar “knows” whether it is open or not. This is similar to how uncontrolled inputs work, which we’ll see in the next chapter.
+	* Option 2, the showSidebar flag can reside in the parent of Sidebar, which is the Layout component. Then parent can decide whether to render the Sidebar or not.
+30. **input-controls/InputExample**
+	* Input controls in React come in two flavors: controlled and uncontrolled.
+	* The reason they’re called “controlled” is because you are responsible for controlling their state. You need to pass in a value, and keep that value updated as the user types.
+31. **input-controls/RefInput**
+	* Alternatively, you can use a ref. A ref gives you access to the input’s underlying DOM node, so you can pull out its value directly. In function components, we can call the `useRef` hook to create an empty ref, and then pass that into a `ref` prop on the input.
+32. **pizza-order**
+	* Create an app that involves radio buttons, a checkbox, a `select` dropdown, and a textarea. You can model it after this form for ordering a pizza, or make up something on your own.
+	* <img alt="example of pizza order app" src="https://i.imgur.com/i2gc9aZ.png" width="384" />
+33. **use_reducer-examples/Counter**
+	* A complete example of a component using useReducer to increment a number.
+34. **use_reducer-examples/ShoppingList**
+	* Create a component that sets up a ref and a reducer. The ref will hold a reference to a form input, so that we can extract its value.
+	* Add a button to clear the shopping list. You’ll need to dispatch a new action (“clear”) and handle it in the reducer.
+35. **use_reducer-room-lights//**
+	* Make a “room” with a light that has 4 levels – off, low, medium, high – and change the level each time you press a button. Create a second button to turn the lights off.
+36. **use_reducer-keypad**
+	* Make a “keypad” with 6 buttons that must be pressed in the correct order to unlock it. Each correct button press advances the state. An incorrect button should reset it.

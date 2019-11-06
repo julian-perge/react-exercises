@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+
+import Child from './Child';
+import Reset from './Reset';
 
 export class CountingParent extends Component {
 	constructor(props) {
 		super(props);
+		// Set the state here. Use "props" if needed.
 		this.state = { actionCount: 0 };
+		this.handleAction = this.handleAction.bind(this);
 	}
 
 	handleAction = (action) => {
 		const { actionCount } = this.state;
-		console.log(`Child says`, action);
+		// console.log(`Child says`, action);
 		this.setState({ actionCount: actionCount + 1 });
 	};
 
 	resetAction = (action) => {
-		console.log(`reset says`, action.target);
+		// console.log(`reset says`, action.target);
 		this.setState({ actionCount: 0 });
-	}
+	};
 
 	render() {
 		const { actionCount } = this.state;
@@ -29,14 +33,5 @@ export class CountingParent extends Component {
 		);
 	}
 }
-
-function Child({ onAction }) {
-	return <button type="button" onClick={onAction}>Click Me!</button>;
-}
-
-function Reset({ onAction }) {
-	return <button type="button" onClick={onAction}>RESET</button>;
-}
-
 
 export default CountingParent;

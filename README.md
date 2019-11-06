@@ -4,30 +4,30 @@ test
 ## Exercises ##
 1. **static-tweet**
 	* Beginning exercise
+
 2. **envelope/AddressLabel**
 	* Create an `AddressLabel` component that takes a `person` object as a prop and renders their name and address like so:
-
 ![](https://i.imgur.com/kEn9GqH.png)
+
 3. **envelope**
 	* Create an `Envelope` component that takes `toPerson` and `fromPerson` as props and uses your `AddressLabel` from Exercise 1 to display the return address and the recipient address. Make sure to include a `Stamp` too!
-
 ![](https://i.imgur.com/ZfbWp0R.png)
+
 4. **credit_card**
 	* Create a `CreditCard` component based on this design. Style it up with CSS or inline styles. Accept a `cardInfo` prop that contains the person’s name, expiration date, credit card number, and bank name.
-
 <img src="https://i.imgur.com/78SxgrS.png" alt="credit card example" width="256" />
 5. **poster**
 	* Create a `Poster` component that takes `image, title`, and `text` as props. Google “demotivational posters” for inspiration. Render something like the image below.
-
 ![](https://i.imgur.com/urcqNZ0.png)
+
 6. **email-example**
 	* Create a single-line email, as would appear in an inbox. It should accept an `email` prop, which contains the sender, subject, date, and message. Reference the screenshot below.
-
 ![](https://i.imgur.com/nhmiklZ.png)
+
 7. **children-exercises/ErrorBox**
 	* Make a component to display an “error box” that looks like this:
-
 ![](https://i.imgur.com/8hGQpcc.png)
+
 8. **children-exercises/FirstChildOnly**
 	* Write a component called `FirstChildOnly` that accepts any number of children but only renders the first.
 9. **children-exercises/LastChildOnly**

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 // Destructure props to just value to display name of person to render
 function ListItem({ value }) {
-	return (<li className="person">{value}</li>);
+	return <li className="person">{value}</li>;
 }
 
 /*
@@ -32,7 +32,7 @@ function Tail({ number, children }) {
 
 Tail.propTypes = {
 	// node instead of element since we are not passing a single ReactElement
-	children: PropTypes.node.isRequired,
+	children: PropTypes.node.isRequired
 };
 
 export default Tail;

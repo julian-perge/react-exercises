@@ -7,7 +7,7 @@ function ListItem({ value }) {
 }
 
 // Destructure passed in node
-function Head({ number, children }) {
+export default function Head({ children, number }) {
 	// Destructure from conversion to array
 	// first const being the number of people to render
 	// second const being an array of people given
@@ -27,7 +27,6 @@ function Head({ number, children }) {
 
 Head.propTypes = {
 	// node instead of element since we are not passing a single ReactElement
-	children: PropTypes.node.isRequired
+	children: PropTypes.node.isRequired,
+	number: PropTypes.number.isRequired
 };
-
-export default Head;

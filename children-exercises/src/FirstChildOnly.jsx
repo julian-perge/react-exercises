@@ -5,9 +5,7 @@ function FirstChildOnly({ children }) {
 	const items = Children.toArray(children);
 	return (
 		<div className="firstChildOnly">
-			<span className="firstChild">
-				{items.length >= 1 && items[0]}
-			</span>
+			<span className="firstChild">{items.length >= 1 && items[0]}</span>
 		</div>
 	);
 }
@@ -16,8 +14,8 @@ FirstChildOnly.propTypes = {
 	children: PropTypes.oneOfType([
 		PropTypes.element,
 		PropTypes.node,
-		PropTypes.string,
-	]).isRequired,
+		PropTypes.string
+	]).isRequired
 };
 
 export default FirstChildOnly;

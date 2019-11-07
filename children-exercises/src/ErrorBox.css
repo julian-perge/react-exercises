@@ -1,6 +1,6 @@
 .errorBox {
 	background-color: #ffe6e6;
-	border: 2px solid red;
+	border: 2px solid #c40026;
 	border-radius: 7px;
 	height: 56px;
 	width: 512px;
@@ -20,5 +20,5 @@ i.fas.fa-exclamation-triangle {
 }
 
 .children-exercises {
-	border: 1px solid black;
+	border: 1px solid #000;
 }

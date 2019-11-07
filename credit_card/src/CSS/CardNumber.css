@@ -1,0 +1,29 @@
+.cardNumber {
+	align-items: center;
+	display: grid;
+	justify-items: center;
+	grid-area: cardNumber;
+	grid-template-areas: 'one two three four';
+	font-size: 1.25rem;
+}
+
+.cardNumber li {
+	letter-spacing: 3px;
+	list-style: none;
+}
+
+.numberSetOne {
+	grid-area: one;
+}
+
+.numberSetTwo {
+	grid-area: two;
+}
+
+.numberSetThree {
+	grid-area: three;
+}
+
+.numberSetFour {
+	grid-area: four;
+}

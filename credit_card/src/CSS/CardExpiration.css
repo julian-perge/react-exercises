@@ -1,0 +1,33 @@
+.expiration {
+	align-items: center;
+	display: grid;
+	grid-area: cardExp;
+	grid-template-areas:
+		'valid date'
+		'thru date';
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: repeat(2, 1fr);
+	justify-items: center;
+	letter-spacing: 3px;
+	width: 75%;
+}
+
+.expValid,
+.expThru {
+	font-size: 0.5rem;
+}
+
+.expValid {
+	align-self: flex-end;
+	grid-area: valid;
+}
+
+.expThru {
+	align-self: flex-start;
+	grid-area: thru;
+}
+
+.expDate {
+	font-size: 1.125rem;
+	grid-area: date;
+}

@@ -1,0 +1,16 @@
+.creditCard {
+	background-color: rgb(37, 85, 161);
+	border: 1px solid #000;
+	border-radius: 0.75em;
+	display: grid;
+	grid-template-areas:
+		'. bankName bankName bankName'
+		'. . . .'
+		'cardNumber cardNumber cardNumber cardNumber'
+		'cardSec cardExp cardExp .'
+		'cardHolder cardHolder cardHolder .';
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 2fr repeat(4, 1fr);
+	height: 212px;
+	width: 337px;
+}

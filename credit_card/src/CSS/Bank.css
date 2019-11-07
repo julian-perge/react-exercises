@@ -1,0 +1,7 @@
+.bankName {
+	font-size: 1.5rem;
+	grid-area: bankName;
+	justify-self: flex-end;
+	margin-right: 0.75em;
+	margin-top: 0.5rem;
+}

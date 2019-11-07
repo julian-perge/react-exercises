@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CreditCard from './Components/CreditCard/CreditCard';
+import CreditCard from './Components/CreditCard';
 
 import './layout.css';
 import './minireset.min.css';

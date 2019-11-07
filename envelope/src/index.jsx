@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Envelope from './Components/Envelope/Envelope';
-import './minireset.min.css';
-import './layout.css';
+
+import Envelope from './Components/Envelope';
+
+import './CSS/minireset.min.css';
 
 const fromPerson = {
   fullName: 'Julian Perge',

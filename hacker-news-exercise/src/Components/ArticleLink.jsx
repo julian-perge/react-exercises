@@ -7,9 +7,7 @@ function ParseUrl(link) {
 	const regExp = /^(?:(?![^:@]+:[^:@/]*@)([^:/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#/]*\.[^?#/.]+(?:[?#]|$)))*\/?)?([^?#/]*))(?:\?([^#]*))?(?:#(.*))?)/;
 	const parsedUrl = link.match(regExp)[2];
 	return `${
-		parsedUrl.startsWith('www')
-			? `${parsedUrl.substring(4)}`
-			: parsedUrl
+		parsedUrl.startsWith('www') ? `${parsedUrl.substring(4)}` : parsedUrl
 	}`;
 }
 
@@ -19,11 +17,7 @@ function ArticleLink({ article }) {
 		<>
 			<a href={`from?site=${parsedURL}`} className="article-link">
 				{article.title}
-				<span className="article-link-domain">
-					{'('}
-					{parsedURL}
-					{')'}
-				</span>
+				<span className="article-link-domain">{`(${parsedURL})`}</span>
 			</a>
 		</>
 	);

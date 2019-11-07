@@ -1,0 +1,47 @@
+table.file-list {
+	background-color: #fff;
+	border-collapse: collapse;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	color: #333;
+	font-family: Helvetica, sans-serif;
+	margin: 0 auto;
+	width: 980px;
+}
+
+table.file-list td {
+	border-top: 1px solid #eaecef;
+	line-height: 20px;
+	padding: 6px 3px;
+}
+
+table.file-list .file-icon {
+	color: rgba(3, 47, 98, .55);
+	padding-left: 10px;
+	padding-right: 2px;
+	width: 1.625rem;
+}
+
+table.file-list .file-icon .file-icon_img {
+	height: 16px;
+	width: 14px;
+}
+
+table.file-list .file-name {
+	max-width: 180px;
+}
+
+table.file-list .commit-message {
+	color: #6a737d;
+	max-width: 442px;
+	overflow: hidden;
+	padding-left: 10px;
+}
+
+table.file-list .age {
+	color: #6a737d;
+	padding-right: 10px;
+	text-align: right;
+	white-space: nowrap;
+	width: 125px;
+}

@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Email from './Components/Email/Email';
+import Email from './Components/Email';
 
-import './layout.css';
-import './minireset.min.css';
+import './CSS/layout.css';
+import './CSS/minireset.min.css';
 
 const singleEmail = {
 	sender: 'SlayTheSpireFanClub',

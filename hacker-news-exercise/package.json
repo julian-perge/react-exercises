@@ -5,9 +5,9 @@
 	"dependencies": {
 		"moment": "^2.24.0",
 		"prop-types": "^15.7.2",
-		"react": "^16.9.0",
-		"react-dom": "^16.9.0",
-		"react-scripts": "^3.1.2"
+		"react": "^16.11.0",
+		"react-dom": "^16.11.0",
+		"react-scripts": "3.2.0"
 	},
 	"scripts": {
 		"format": "prettier --write \"src/**/*.{js,jsx}\"",
@@ -20,33 +20,16 @@
 	"eslintConfig": {
 		"extends": "react-app"
 	},
-	"browserslist": [
-		">0.2%",
-		"not dead",
-		"not ie <= 11",
-		"not op_mini all"
-	],
-	"devDependencies": {
-		"babel-core": "^6.26.3",
-		"babel-eslint": "10.0.3",
-		"babel-plugin-transform-class-properties": "^6.24.1",
-		"babel-preset-env": "^1.7.0",
-		"babel-preset-react": "^6.24.1",
-		"eslint": "6.1.0",
-		"eslint-config-airbnb": "18.0.1",
-		"eslint-config-prettier": "6.3.0",
-		"eslint-plugin-import": "2.18.2",
-		"eslint-plugin-jsx-a11y": "6.2.3",
-		"eslint-plugin-prettier": "^3.1.1",
-		"eslint-plugin-react": "7.14.3",
-		"eslint-plugin-react-hooks": "1.7.0",
-		"prettier": "^1.14.3"
-	},
-	"peerDependencies": {
-		"eslint-plugin-import": "^2.18.2",
-		"eslint-plugin-jsx-a11y": "^6.2.3",
-		"eslint-plugin-react": "^7.14.3",
-		"eslint-plugin-react-hooks": "^2.0.1",
-		"typescript": "^3.6.3"
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
 	}
 }

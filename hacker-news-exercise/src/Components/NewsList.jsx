@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Article from './Article';
 import Banner from './Banner';
 
-import '../styles.css';
-import icon from '../y18.gif';
+import '../CSS/styles.css';
+import icon from '../CSS/y18.gif';
 
 const NewsList = ({ articles }) => (
 	<div className="background">

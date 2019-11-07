@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import InputExample from './InputExample';
-import RefInput from './RefInput';
+import InputExample from './Components/InputExample';
+import RefInput from './Components/RefInput';
 
-import './minireset.min.css';
+import './CSS/minireset.min.css';
 
 ReactDOM.render(
 	<div>

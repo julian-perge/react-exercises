@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './minireset.min.css';
-import FileList from './Components/FileList/FileList';
+
+import FileList from './Components/FileList';
+
+import './CSS/minireset.min.css';
 
 const listOfFiles = [
 	{

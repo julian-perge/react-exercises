@@ -16,6 +16,8 @@ function GlutenCheckbox({ isChecked }) {
 	);
 }
 
-GlutenCheckbox.propTypes = {};
+GlutenCheckbox.propTypes = {
+	isChecked: PropTypes.func.isRequired
+};
 
 export default GlutenCheckbox;

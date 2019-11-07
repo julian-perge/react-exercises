@@ -1,5 +1,7 @@
 #root {
 	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .pizza-order {
@@ -71,10 +73,6 @@
 	justify-content: space-between;
 }
 
-#charCount {
-	/* width: 100%; */
-}
-
 #textareaInstruction {
 	resize: none;
 }
@@ -113,8 +111,8 @@
 .list-order-items {
 	border: 1px solid #000;
 	max-width: 320px;
-	position: relative;
 	padding: 4px;
+	position: relative;
 }
 
 .list-order-items li {
@@ -125,6 +123,6 @@
 
 .btn-remove-order {
 	position: absolute;
-	top: 4px;
 	right: 4px;
+	top: 4px;
 }

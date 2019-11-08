@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 
 import Tweet from './Components/Tweet/Tweet';
 
-import './minireset.min.css';
-import './index.css';
+import './CSS/minireset.min.css';
+import './CSS/index.css';
 
 const testTweet = {
   author: {

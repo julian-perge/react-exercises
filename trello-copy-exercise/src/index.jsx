@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './layout.css';
-import './minireset.min.css';
+
+import './CSS/layout.css';
+import './CSS/minireset.min.css';
 
 import CardList from './Components/CardList';
 

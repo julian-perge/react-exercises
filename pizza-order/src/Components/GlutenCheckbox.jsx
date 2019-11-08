@@ -6,10 +6,10 @@ function GlutenCheckbox({ isChecked }) {
 		<label id="checkboxGluten" htmlFor="checkbox-gluten">
 			<input
 				className="input-item"
-				onClick={isChecked}
 				name="checkbox-gluten"
+				onClick={isChecked}
 				type="checkbox"
-				value="gluten-free"
+				defaultChecked={false}
 			/>
 			Gluten Free
 		</label>

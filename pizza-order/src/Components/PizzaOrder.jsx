@@ -15,14 +15,14 @@ const PizzaOrder = ({ removeOrder, order }) => (
 		<li id="order-size">{`Size: ${order.size}`}</li>
 		<li id="order-topping">{`Topping: ${order.topping}`}</li>
 		<li id="order-gluten">{`Gluten free: ${order.gluten}`}</li>
-		<li id="order-instructions">{`Instructions: ${order.instructions}`}</li>
+		<li id="order-instructions">{`Instructions: ${order.instructions.text}`}</li>
 	</ul>
 );
 
 PizzaOrder.propTypes = {
 	removeOrder: PropTypes.func.isRequired,
 	order: PropTypes.shape({
-		id: PropTypes.string.isRequired,
+		id: PropTypes.number.isRequired,
 		size: PropTypes.string.isRequired,
 		topping: PropTypes.string.isRequired,
 		gluten: PropTypes.bool.isRequired,

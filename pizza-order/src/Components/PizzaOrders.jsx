@@ -16,5 +16,5 @@ export default function PizzaOrders({ removeOrder, orders }) {
 
 PizzaOrders.propTypes = {
 	removeOrder: PropTypes.func.isRequired,
-	orders: PropTypes.arrayOf(PropTypes.element),
+	orders: PropTypes.arrayOf(PropTypes.object),
 }

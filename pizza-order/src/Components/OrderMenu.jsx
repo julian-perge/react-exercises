@@ -1,5 +1,4 @@
 import React, { useReducer, useState } from 'react';
-import short from 'short-uuid';
 
 import OrderSize from './OrderSize';
 import Logo from './Logo';
@@ -8,41 +7,32 @@ import GlutenCheckbox from './GlutenCheckbox';
 import SpecialInstructions from './SpecialInstructions';
 import SubmitOrder from './SubmitOrder';
 
-import '../CSS/styles.css';
 import PizzaOrders from './PizzaOrders';
 
-const decTranslator = short("0123456789")
+import '../CSS/styles.css';
 
 const reducerOrders = (state, action) => {
 	if (action.type === 'add') {
 		return [
 			...state,
 			{
-				id: decTranslator.generate().substring(this.length / 2),
-				size: state.size,
-				topping: state.topping,
-				gluten: state.gluten,
-				instructions: {
-					text: state.instructions.text,
-					characterCount: state.instructions.characterCount
-				}
+				id: action.lastOrderNum + 1,
+				size: action.size,
+				topping: action.topping,
+				gluten: action.gluten,
+				instructions: action.instructions
 			}
 		];
 	} else {
-		return state.filter((_, index) => index !== action.index);
+		return state.filter((order) => order.id !== action.index);
 	}
 };
 
-function init(ordersJSON) {
-	ordersJSON.forEach((order) => {
-		const uuidv5 = decTranslator.generate().substring(0, 17);
-		order.id = uuidv5;
-	});
-	return ordersJSON;
-}
-
 export default function OrderMenu({ listOfToppings, ordersJSON }) {
-	const [orders, dispatchOrders] = useReducer(reducerOrders, ordersJSON, init);
+	const [orders, dispatchOrders] = useReducer(reducerOrders, ordersJSON);
+	const [lastOrderNumber, setLastOrderNumber] = useState(
+		orders[orders.length - 1].id
+	);
 	const [size, setSize] = useState('small');
 	const [topping, setTopping] = useState('');
 	const [gluten, setGluten] = useState(false);
@@ -53,31 +43,46 @@ export default function OrderMenu({ listOfToppings, ordersJSON }) {
 
 	const toggleGluten = () => setGluten(!gluten);
 
-	const getSize = (event) => {
+	const handleSize = (event) => {
 		const strSize = event.target.value;
 		setSize(() => strSize);
 	};
 
-	const getTopping = (event) => {
-		const newTopping = event.target.value;
-		setTopping(() => newTopping);
+	const handleTopping = (event) => {
+		const newTopping = event.currentTarget;
+		setTopping(() => newTopping.value);
 	};
 
-	function getInstructions(event) {
-		const specialNote = event.target;
+	function handleInstructions(event) {
+		const specialNote = event.currentTarget;
 		setInstructions(() => ({
-			...instructions,
-			characterCount: specialNote.textLength || 0,
-			text: specialNote.value || ''
+			characterCount: specialNote.textLength,
+			text: specialNote.value
 		}));
 	}
 
-	const handleSubmit = () => {
-		dispatchOrders({ type: 'add' });
+	const clearOrder = () => {
+
+		setSize('small');
+		setTopping('default');
 	};
 
-	const handleRemoval = () => {
-		dispatchOrders({ type: 'remove' });
+	const handleSubmit = () => {
+		dispatchOrders({
+			type: 'add',
+			lastOrderNum: lastOrderNumber,
+			size: size,
+			topping: topping,
+			gluten: gluten,
+			instructions: instructions
+		});
+		setLastOrderNumber(() => lastOrderNumber + 1);
+		clearOrder();
+	};
+
+	const handleRemoval = (event) => {
+		const index = Number.parseInt(event.currentTarget.value);
+		dispatchOrders({ type: 'remove', index });
 	};
 
 	return (
@@ -87,12 +92,12 @@ export default function OrderMenu({ listOfToppings, ordersJSON }) {
 					<h1 id="headerTitle">Order Your Pizza</h1>
 					<Logo />
 				</header>
-				<OrderSize onChange={getSize} />
-				<Toppings getTopping={getTopping} toppings={listOfToppings} />
+				<OrderSize onSize={handleSize} />
+				<Toppings onTopping={handleTopping} toppings={listOfToppings} />
 				<GlutenCheckbox isChecked={toggleGluten} />
 				<SpecialInstructions
 					charCount={instructions.characterCount}
-					getInstructions={getInstructions}
+					onChange={handleInstructions}
 				/>
 				<SubmitOrder onSubmit={handleSubmit} />
 			</div>

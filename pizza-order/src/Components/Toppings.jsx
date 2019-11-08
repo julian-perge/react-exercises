@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Toppings({ getTopping, toppings }) {
+export default function Toppings({ onTopping, toppings }) {
 	return (
 		<section id="sectionToppings" className="section-toppings">
 			<h2 id="headerToppings" className="section-header">
@@ -9,8 +9,7 @@ export default function Toppings({ getTopping, toppings }) {
 			</h2>
 			<select
 				id="selectToppings"
-				onBlur={() => 'test'}
-				onChange={getTopping}
+				onChange={onTopping}
 				type="select"
 			>
 				<option className="select-option" value="default">
@@ -32,6 +31,6 @@ export default function Toppings({ getTopping, toppings }) {
 }
 
 Toppings.propTypes = {
-	getTopping: PropTypes.func.isRequired,
+	onTopping: PropTypes.func.isRequired,
 	toppings: PropTypes.arrayOf(PropTypes.object).isRequired
 };

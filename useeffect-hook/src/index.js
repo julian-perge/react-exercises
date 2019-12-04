@@ -11,8 +11,8 @@ import Reddit from './Reddit';
 ReactDOM.render(
 	<ErrorBoundary>
 		<App2 />
-		<br />
-		<InputExercise />
+		{/* <br />
+		<InputExercise /> */}
 	</ErrorBoundary>,
 	document.getElementById('root')
 );

@@ -1,0 +1,29 @@
+.hammer-swing {
+	animation: hammerSwing 1000ms linear 1s normal backwards;
+}
+
+@keyframes hammerSwing {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	16% {
+		transform: rotate(70deg);
+	}
+
+	32% {
+		transform: rotate(0deg);
+	}
+
+	48% {
+		transform: rotate(70deg);
+	}
+
+	56% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
